@@ -61,17 +61,17 @@ function App() {
 }, [])
 
   return (
-    <div style={{transform:"translateX(35%) translateY(35%)"}}>
+    <>
       {isAuthenticated ?
         <Dashboard onLogout={handleLogout} /> :
-        <>
+        <div style={{transform:"translateX(35%) translateY(35%)"}}>
           {showLogin ? 
             <Loginpage onLogin={handleLogin} onSwitchToSignup={() => setShowLogin(false)} /> :
             <Signup onLogin={handleLogin} onSwitchToLogin={() => setShowLogin(true)} />
           }
-        </>
+        </div>
       }
-    </div>
+    </>
   );
 }
 
