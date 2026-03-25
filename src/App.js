@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('access_token'))
-  const [showLogin, setShowLogin] = useState(true) 
+  const [showLogin, setShowLogin] = useState(true) // Add state to toggle between login and signup
 
   const handleLogin = (token) => {
     localStorage.setItem('access_token', token)
@@ -61,7 +61,7 @@ function App() {
 }, [])
 
   return (
-    <div style={{transform:"translateX(35%) translateY(50%)"}}>
+    <div style={{transform:"translateX(35%) translateY(35%)"}}>
       {isAuthenticated ?
         <Dashboard onLogout={handleLogout} /> :
         <>
