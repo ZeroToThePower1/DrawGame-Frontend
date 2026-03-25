@@ -436,7 +436,7 @@ function Dashboard() {
     const [username, setUsername] = useState('')
 
     useEffect(() => {
-        const socket = io('http://localhost:3000', {
+        const socket = io('https://drawgame-backend.onrender.com', {
             auth: {
                 token: localStorage.getItem('access_token')
             }
