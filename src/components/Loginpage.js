@@ -6,7 +6,7 @@ function Loginpage(props) {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
-    const BaseApi = 'http://localhost:3000'
+    const BaseApi = 'https://drawgame-backend.onrender.com'
     const userChange = (event) => {
         setUser(event.target.value)
     }
