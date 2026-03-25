@@ -7,7 +7,7 @@ function Signup(props) {
     const [password, setPassword] = useState('')
     const [Cpassword, setCPassword] = useState('')
     const [message, setMessage] = useState('')
-    const BaseApi = 'http://localhost:3000'
+    const BaseApi = 'https://drawgame-backend.onrender.com'
     const userChange = (event) => {
         setUser(event.target.value)
     }
