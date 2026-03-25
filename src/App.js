@@ -28,7 +28,7 @@ function App() {
         return
       }
       
-      const response = await fetch('http://localhost:3000/verify', {
+      const response = await fetch('https://drawgame-backend.onrender.com/verify', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
