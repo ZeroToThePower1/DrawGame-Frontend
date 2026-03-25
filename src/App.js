@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('access_token'))
-  const [showLogin, setShowLogin] = useState(true) // Add state to toggle between login and signup
+  const [showLogin, setShowLogin] = useState(true) 
 
   const handleLogin = (token) => {
     localStorage.setItem('access_token', token)
