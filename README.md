@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Draw and Guess Game 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time multiplayer drawing and guessing game where players take turns drawing while others guess the word. Built with React, Socket.io, Node.js, and MongoDB.
 
-## Available Scripts
+##  Game Overview
 
-In the project directory, you can run:
+Draw and Guess is a multiplayer game similar to Pictionary where:
+- One player draws a given word
+- Other players try to guess the word through chat
+- First to guess correctly wins points
+- Players take turns being the drawer
 
-### `npm start`
+##  Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Real-time Drawing Board**: Smooth drawing with customizable colors and brush sizes
+- **Room System**: Create or join private game rooms with unique codes
+- **Global Chat**: Chat with all online players
+- **Room Chat**: Game-specific chat for guessing
+- **Word Detection**: Automatic detection of correct guesses
+- **Player Management**: Host controls, player joining/leaving notifications
+- **Authentication**: JWT-based user authentication
+- **Responsive Design**: Works on desktop and mobile devices
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Technologies Used
 
-### `npm test`
+### Frontend
+- React.js
+- Socket.io Client
+- HTML5 Canvas
+- CSS3 with modern animations
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
+- Node.js
+- Express.js
+- Socket.io
+- MongoDB with Mongoose
+- JSON Web Tokens (JWT)
+- bcrypt for password hashing
 
-### `npm run build`
+## 📋 Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Before you begin, ensure you have the following installed:
+- Node.js (v14 or higher)
+- MongoDB (v4 or higher)
+- npm or yarn package manager
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/draw-and-guess.git
+cd draw-and-guess
