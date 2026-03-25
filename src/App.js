@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('access_token'))
-  const [showLogin, setShowLogin] = useState(true) 
+  const [showLogin, setShowLogin] = useState(true)
 
   const handleLogin = (token) => {
     localStorage.setItem('access_token', token)
@@ -64,12 +64,18 @@ function App() {
     <>
       {isAuthenticated ?
         <Dashboard onLogout={handleLogout} /> :
-        <>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          minHeight: '100vh',
+          width: '100%'
+        }}>
           {showLogin ? 
             <Loginpage onLogin={handleLogin} onSwitchToSignup={() => setShowLogin(false)} /> :
             <Signup onLogin={handleLogin} onSwitchToLogin={() => setShowLogin(true)} />
           }
-        </>
+        </div>
       }
     </>
   );
