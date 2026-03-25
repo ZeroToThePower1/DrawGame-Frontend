@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import './loginpage.css'
 
-
 function Loginpage(props) {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
     const [message, setMessage] = useState('')
     const BaseApi = 'https://drawgame-backend.onrender.com'
+    
     const userChange = (event) => {
         setUser(event.target.value)
     }
+    
     const passwordChange = (event) => {
         setPassword(event.target.value)
     }
@@ -22,7 +23,6 @@ function Loginpage(props) {
         if (user === '' || password === '') {
             setMessage("empty value")
         } else {
-
             try {
                 const response = await fetch(`${BaseApi}/login`, {
                     method: 'POST',
@@ -64,11 +64,20 @@ function Loginpage(props) {
                 </label>
                 <h4 className="message">{message}</h4>
                 <button className='SubmitBtn' onClick={login}>LogIn</button>
+                
+                <p className="switch-text">
+                    Don't have an account?{' '}
+                    <button 
+                        className="switch-btn" 
+                        onClick={props.onSwitchToSignup}
+                        type="button"
+                    >
+                        Sign Up
+                    </button>
+                </p>
             </div>
         </>
-
     )
-
 }
 
 export default Loginpage;
