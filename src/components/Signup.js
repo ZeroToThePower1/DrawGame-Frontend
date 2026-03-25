@@ -8,15 +8,19 @@ function Signup(props) {
     const [Cpassword, setCPassword] = useState('')
     const [message, setMessage] = useState('')
     const BaseApi = 'https://drawgame-backend.onrender.com'
+    
     const userChange = (event) => {
         setUser(event.target.value)
     }
+    
     const passwordChange = (event) => {
         setPassword(event.target.value)
     }
+    
     const cpasswordChange = (event) => {
         setCPassword(event.target.value)
     }
+    
     async function sign() {
         const signupData = {
             username: user,
@@ -54,11 +58,12 @@ function Signup(props) {
             }
         }
     }
+    
     return (
         <>
             <div className="container">
                 <h2>SignUp</h2>
-                <label className='lables' value={user} onChange={userChange}>
+                <label className='lables'>
                     Username
                     <input type="text" value={user} onChange={userChange}/>
                 </label>
@@ -73,6 +78,17 @@ function Signup(props) {
                 <div className="last">
                     <h4>{message}</h4>
                     <button className="submit" onClick={sign}>Signup</button>
+                    
+                    <p className="switch-text">
+                        Already have an account?{' '}
+                        <button 
+                            className="switch-btn" 
+                            onClick={props.onSwitchToLogin}
+                            type="button"
+                        >
+                            Login
+                        </button>
+                    </p>
                 </div>
             </div>
         </>
