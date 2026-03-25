@@ -4,8 +4,8 @@
     min-height: 400px;
     border-radius: 15px;
     background-color: white;
-    padding: 20px 30px 30px 30px; /* Add padding on all sides */
-    box-sizing: border-box; /* Ensure padding is included in width */
+    padding: 20px 30px 30px 30px; 
+    box-sizing: border-box; 
 }
 
 .container h2 {
